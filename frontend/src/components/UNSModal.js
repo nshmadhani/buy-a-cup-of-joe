@@ -4,9 +4,9 @@ import Web3Modal from 'web3modal'
 
 // These options are used to construct the UAuthSPA instance.
 export const uauthOptions = {
-  clientID: 'ts9DhNTKWQRV45W7LAum0bVYlKmGCi7CWXXrhYNxREc=',
-  clientSecret: 'DHwowO6lDzpJ03K31MmIKjKRWib49yNSAr5g0BbDggA=',
-  redirectUri: 'http://localhost:3000/redirect',
+  clientID: 'GohRkcRCjWm71e/y9VG1GoOv492bFQ9m2JNaC57vwFc=',
+  clientSecret: 'OafoujPr7Z2ppFBWkEc8B4h9UWoZ8M7Fp9eQ4Sv4MpY==',
+  redirectUri: 'https://buy-a-cup-of-joe.vercel.app/callback',
 
   // Must include both the openid and wallet scopes.
   scope: 'openid wallet email:optional',
@@ -24,6 +24,7 @@ const providerOptions = {
 
     // The Connector
     connector: UAuthWeb3Modal.connector,
+    shouldLoginWithRedirect: true,
 
     // The SPA libary
     package: UAuthSPA,

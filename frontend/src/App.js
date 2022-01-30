@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 
+import UAuthSPA from '@uauth/js'
+import * as UAuthWeb3Modal from '@uauth/web3modal'
+
 import "./App.css";
 
 
 import contractAbi from "./util/WavePortal.abi.json";
 import MessageDialog from "./components/MessageDialog";
 import WaveLog from "./components/WUPHFLog";
-import web3modal from './components/UNSModal'
+import web3modal,{ uauthOptions} from './components/UNSModal'
 
 
 const contractAddr = "0x782Ece9bcE1D2C510B98ce1706f14BB57fFd697E";
@@ -66,29 +69,17 @@ export default function App() {
   };
 
   const checkIfWalletIsConnected = async () => {
-    try {
-      const { ethereum } = window;
+    UAuthWeb3Modal.getUAuth(UAuthSPA, uauthOptions)
+                  .loginCallback()
+                  .then(async () => {
+                    const provider = await web3modal.connectTo('custom-uauth')
+                    
+                    console.log(provider);
 
-      if (!ethereum) {
-        console.log("Make sure you have metamask!");
-        return;
-      } else {
-        console.log("We have the ethereum object", ethereum);
-      }
-
-      const accounts = await ethereum.request({ method: "eth_accounts" });
-
-      if (accounts.length !== 0) {
-        const account = accounts[0];
-        console.log("Found an authorized account:", account);
-        getAllWaves();
-        //setCurrentAccount(account);
-      } else {
-        console.log("No authorized account found");
-      }
-    } catch (error) {
-      console.log(error);
-    }
+                  })
+                  .catch(error => {
+                    // Redirect to failure page
+                  })
   };
 
   const connectWallet = async () => {
@@ -159,7 +150,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    checkIfWalletIsConnected();
+    checkIfWalletIsConnected(); 
   }, []);
 
   return (
