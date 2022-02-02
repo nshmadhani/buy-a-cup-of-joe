@@ -25,7 +25,7 @@ async function main() {
   console.log("Greeter deployed to:", manager.address);
 
 
-  let addTxn = await manager.connect(creatorAccount).addCreator("img", "John Smith");
+  let addTxn = await manager.connect(creatorAccount).addCreator( "John Smith","jonsmith.crypto");
   let recpt = await addTxn.wait();
 
   let creator = await manager.creators(creatorAccount.address);
@@ -38,14 +38,25 @@ async function main() {
 
   console.log("Eth Sent", tx.hash);
 
-  let donation = await manager.connect(donatorAccount).makeDonation(creatorAccount.address, "I likes the view", 0.1,tx.hash);
+  let donation = await manager.connect(donatorAccount).makeDonation(creatorAccount.address, "I likes the view","nshmadhani.crypto", 1,tx.hash);
   console.log("Donation made by ", donatorAccount.address);
+  
 
-  let donationsToCreator = await manager.donationsToUser(creatorAccount.address, 0);
-  console.log(donationsToCreator);
+  let donationsToCreator = await manager.totalCreatorDonations(creatorAccount.address);
+  //console.log(donationsToCreator);
 
-  let donationsByUser = await manager.donationsByUser(donatorAccount.address, 0);
-  console.log(donationsByUser);
+  let donationsByUser = await manager.totalDonationsMade(donatorAccount.address);
+  //console.log(donationsByUser);
+
+  let donationSize = await manager.totalCreatorDonations(creatorAccount.address);
+  console.log(donationSize);
+  let donations = [];
+  while(donationSize > 0) {
+    donations.push(await manager.donationsToUser(creatorAccount.address, --donationSize))
+  }
+  console.log(donations)
+
+
   
 
 

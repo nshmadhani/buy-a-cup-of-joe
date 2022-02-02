@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './index.css';
 import App from './App';
 
-import './App.css';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 function RouteApp(params) {
     return (
-  <Router>
+    <Router>
         <Routes>
           <Route path="/" element={<App />}/>
           <Route path="/callback" element={<App />} />        

@@ -25,7 +25,7 @@ export default function MessageDialog({ open,setOpen, setConfirm }) {
 
     <div>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Send a message!</DialogTitle>
+        <DialogTitle>Tell me about you!</DialogTitle>
         <DialogContent>
           <DialogContentText>
             if you dont have anything to send, tell me about your first web3 project!.
@@ -43,7 +43,7 @@ export default function MessageDialog({ open,setOpen, setConfirm }) {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Nah, I'll pass</Button>
-          <Button onClick={handleConfirm}>Wave</Button>
+          <Button onClick={handleConfirm}>Fill My Belly Up</Button>
         </DialogActions>
       </Dialog>
     </div>
