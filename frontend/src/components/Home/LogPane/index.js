@@ -42,20 +42,21 @@ export default function LogPane({ creatorAccount,allDonations }) {
 
     useEffect(() => {
         setUauth(UAuthWeb3Modal.getUAuth(UAuthSPA, uauthOptions))
+        checkIfWalletIsConnected()
     }, [])
 
-    // const checkIfWalletIsConnected = async () => {
-    //     uauth.loginCallback()
-    //       .then(async () => {
-    //         const provider = await web3modal.connectTo('custom-uauth')
-    //         setUser(await uauth.user());
-    //         setProvider(provider)
-    //       })
-    //       .catch(error => {
-    //         // Redirect to failure page
-    //         console.error("checkIfWalletIsConnected", error)
-    //       })
-    // };
+     const checkIfWalletIsConnected = async () => {
+        uauth.loginCallback()
+          .then(async () => {
+            const provider = await web3modal.connectTo('custom-uauth')
+            setUser(await uauth.user());
+            setProvider(provider)
+          })
+          .catch(error => {
+            // Redirect to failure page
+            console.error("checkIfWalletIsConnected", error)
+          })
+    };
 
     const getDonations = async () => {
         if (!provider) {
@@ -112,4 +113,4 @@ export default function LogPane({ creatorAccount,allDonations }) {
     )
 
 
-}
+    }
