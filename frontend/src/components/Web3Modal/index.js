@@ -6,7 +6,7 @@ import Web3Modal from 'web3modal'
 export const uauthOptions = {
   clientID: 'wJEIhbY/AzkRh7G1l2+j7CFEl0r8trKJOwY38UaHIU0=',
   clientSecret: 'motjIxAAejscUApcIX3A/qpefhFbUKHYDY1iDPCWGV4=',
-  redirectUri: 'http://buy-a-cup-of-joe.vercel.app/callback',
+  redirectUri: 'https://buy-a-cup-of-joe.vercel.app/callback',
   // Must include both the openid and wallet scopes.
   scope: 'openid wallet email:optional',
 }
