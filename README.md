@@ -10,11 +10,11 @@ Repo - [https://github.com/nshmadhani/buy-a-cup-of-joe](https://github.com/nshma
 
 # Working App
 
-Website - [https://unbank-businesses.netlify.app/](https://unbank-businesses.netlify.app/)
+Website - [https://buy-a-cup-of-joe.vercel.app/](https://buy-a-cup-of-joe.vercel.app//)
 
 # Demo Video
 
-Youtube - [https://youtu.be/X-1TpBQd_8Q](https://youtu.be/X-1TpBQd_8Q)
+Youtube - [https://www.youtube.com/watch?v=Vo4aWaxfLNQ](https://www.youtube.com/watch?v=Vo4aWaxfLNQ)
 
 
 # Contact Info
