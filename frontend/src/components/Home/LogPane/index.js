@@ -42,8 +42,12 @@ export default function LogPane({ creatorAccount,allDonations }) {
 
     useEffect(() => {
         setUauth(UAuthWeb3Modal.getUAuth(UAuthSPA, uauthOptions))
-        checkIfWalletIsConnected()
     }, [])
+
+    useEffect(() => {
+        if(!uauth) return;
+        checkIfWalletIsConnected()
+    }, [uauth])
 
      const checkIfWalletIsConnected = async () => {
         uauth.loginCallback()
