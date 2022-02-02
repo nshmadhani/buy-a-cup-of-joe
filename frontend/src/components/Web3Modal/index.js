@@ -4,8 +4,8 @@ import Web3Modal from 'web3modal'
 
 // These options are used to construct the UAuthSPA instance.
 export const uauthOptions = {
-  clientID: 'Hwh4LYmekVL0Hc6D3GGeREmhsCPqeilON4rItB9CFoI=',
-  clientSecret: 'fB5+r1TGXVFO9yPVu38tIVVQ0Hxe4XcVM7SegZsuZdM=',
+  clientID: 'wJEIhbY/AzkRh7G1l2+j7CFEl0r8trKJOwY38UaHIU0=',
+  clientSecret: 'motjIxAAejscUApcIX3A/qpefhFbUKHYDY1iDPCWGV4=',
   redirectUri: 'http://localhost:3000/callback',
   // Must include both the openid and wallet scopes.
   scope: 'openid wallet email:optional',

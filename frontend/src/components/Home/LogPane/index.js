@@ -76,8 +76,7 @@ export default function LogPane({ creatorAccount,allDonations }) {
             while (donationSize > 0) {
                 donations.push(await manager.donationsToUser(creatorAccount.address, --donationSize))
             }
-            //setAllDonations(donations)
-
+            setDonations(donations);
         } catch (error) {
             console.log("Error in Get Donations")
             console.error(error);
