@@ -21,6 +21,6 @@ Youtube - [https://www.youtube.com/watch?v=Vo4aWaxfLNQ](https://www.youtube.com/
 
 - Discord ID - nshmadhani#7078
 - Email ID - [nshmadhani@gmail.com](mailto:nshmadhani@gmail.com)
-- Eth Address - 0x0022d07d887435CC481f8dc22c3373b3265e48bA
+- Eth Address - 0x33e5A065BD6277B8756F2C2809091e041034989f
 
 
