@@ -14,7 +14,7 @@ Website - [https://buy-a-cup-of-joe.vercel.app/](https://buy-a-cup-of-joe.vercel
 
 # Demo Video
 
-Youtube - [https://www.youtube.com/watch?v=Vo4aWaxfLNQ](https://www.youtube.com/watch?v=Vo4aWaxfLNQ)
+Youtube - [https://youtu.be/LOMKzDsFFXE](https://youtu.be/LOMKzDsFFXE)
 
 
 # Contact Info
